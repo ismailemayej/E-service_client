@@ -11,10 +11,9 @@ interface IFormInput {
 
 const AddEventItem = () => {
   const navigate = useNavigate();
-
   const mutation = useMutation({
     mutationFn: (data: IFormInput) => {
-      return axios.post("http://localhost:5000/eventitem", data);
+      return axios.post("https://e-service-eosin.vercel.app/eventitem", data);
     },
     onSuccess: (data) => {
       console.log("Event created successfully:", data);

@@ -1,15 +1,11 @@
-import { ReactNode } from "react";
-import { TbSelect } from "react-icons/tb";
+import { cn } from "@/lib/utils";
 
-type TChildren = {
-  children: ReactNode;
-};
-const Item = ({ children }: TChildren) => {
+const PricingLisfIcon = ({ children, className }) => {
   return (
-    <span className="flex items-center mb-4 gap-2">
+    <li className="flex space-x-3">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="flex-shrink-0 h-5 rounded-full bg-white text-black p-1 w-5"
+        className="flex-shrink-0 h-5 rounded-full bg-[#E7F5E8] text-black p-1 w-5"
         width="24"
         height="24"
         viewBox="0 0 24 24"
@@ -22,10 +18,12 @@ const Item = ({ children }: TChildren) => {
       >
         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
         <path d="M5 12l5 5l10 -10"></path>
-      </svg>{" "}
-      {children}
-    </span>
+      </svg>
+      <span className={cn("text-slate-700 text-lg", className)}>
+        {children}
+      </span>
+    </li>
   );
 };
 
-export default Item;
+export default PricingLisfIcon;

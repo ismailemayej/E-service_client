@@ -14,6 +14,7 @@ import Addcustomerreview from "../admin/add/AddCustomerReview";
 import ControlEventItems from "../admin/ControlEventItems";
 import ControlRecentEvent from "../admin/ControlRecentEvent";
 import ControlCustomerReviews from "../admin/ControlCustomerReviews";
+import UpdateEventItem from "../admin/update/UpdateEventItem";
 
 const route = createBrowserRouter([
   {
@@ -40,6 +41,7 @@ const route = createBrowserRouter([
       { path: "customerreview", element: <ControlCustomerReviews /> },
       { path: "ourservices/add-service", element: <AddServices /> },
       { path: "eventitem/add-eventitem", element: <AddEventItem /> },
+      { path: "eventitem/update-eventitem", element: <UpdateEventItem /> },
       { path: "recentevent/add-recentevent", element: <AddRecentEvent /> },
       {
         path: "customerreviews/add-customerreviews",

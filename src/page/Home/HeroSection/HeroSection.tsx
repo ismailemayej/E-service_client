@@ -19,7 +19,7 @@ const HeroSection = () => {
         </button>
 
         <div className="my-20 grid w-full lg:grid-cols-3 gap-3">
-          <div className="border-4 rounded-3xl px-4 py-6 border-white lg:w-56 lg:h-48 ">
+          <div className="transition hover:bg-slate-200 hover:scale-95 hover:delay-75 border-4 rounded-3xl px-4 py-6 border-white lg:w-56 lg:h-48 ">
             <div className="flex">
               <span className="bg-blue-500 rounded-full h-10 w-10"></span>
             </div>
@@ -28,7 +28,7 @@ const HeroSection = () => {
               imperdiet sed id.
             </div>
           </div>
-          <div className="border-4 rounded-3xl px-4 py-6 border-white lg:w-56 lg:h-48 ">
+          <div className="transition hover:bg-slate-200 hover:scale-95 hover:delay-75 border-4 rounded-3xl px-4 py-6 border-white lg:w-56 lg:h-48 ">
             <div className="flex">
               <span className="bg-blue-200 rounded-full h-10 w-10"></span>
             </div>
@@ -37,7 +37,7 @@ const HeroSection = () => {
               imperdiet sed id.
             </div>
           </div>
-          <div className="border-4 rounded-3xl px-4 py-6 border-white lg:w-56 lg:h-48">
+          <div className="transition hover:bg-slate-300 hover:scale-95 hover:delay-75 border-4 rounded-3xl px-4 py-6 border-white lg:w-56 lg:h-48">
             <div className="flex">
               <span className="bg-blue-300 rounded-full h-10 w-10"></span>
             </div>

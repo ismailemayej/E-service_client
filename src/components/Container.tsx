@@ -9,7 +9,7 @@ const Container = ({ children, className }: TContainer) => {
   return (
     <div
       className={cn(
-        "h-full lg:px-[80px] px-4 w-full max-w-[1440px]",
+        "h-full lg:px-[80px] px-[20px] w-full max-w-[1440px]",
         className
       )}
     >

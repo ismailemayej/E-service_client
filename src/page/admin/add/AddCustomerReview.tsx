@@ -19,7 +19,10 @@ const Addcustomerreview = () => {
   const navigate = useNavigate();
   const mutation = useMutation({
     mutationFn: (data) => {
-      return axios.post("http://localhost:5000/customerreviews", data);
+      return axios.post(
+        "https://e-service-eosin.vercel.app/customerreviews",
+        data
+      );
     },
     onSuccess: (data) => {
       console.log("service created successfully:", data);

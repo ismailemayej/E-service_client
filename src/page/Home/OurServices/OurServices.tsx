@@ -25,7 +25,7 @@ const OurServices = () => {
       />
       <>
         <div className="mt-12  lg:w-[100%] w-[100%] gap-5 grid sm:grid-cols-1 md:mx-auto lg:grid-cols-3 md:grid-cols-2">
-          {data.data.map((item: Titem) => (
+          {data?.data?.map((item: Titem) => (
             <div className="group relative rounded-lg flex justify-center content-div bg-cover group-hover:bg-red-500">
               <Card className="card shadow-md bg-slate-200 h-[569px] w-[100%] group-hover:opacity-0">
                 <div className="mb-4">

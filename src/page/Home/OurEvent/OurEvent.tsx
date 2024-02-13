@@ -43,18 +43,6 @@ const OurEvent = () => {
       });
   };
 
-  const handleRemove = (id: TId) => {
-    axios
-      .delete(`https://e-service-eosin.vercel.app/eventitem/${id}`)
-      .then(() => {
-        location.reload();
-        alert("eventitem deleted successfully");
-      })
-      .catch((error) => {
-        console.error("Error deleting resource:", error);
-      });
-  };
-
   const style = "bg-[#D9D9D9] border-2 rounded-lg lg:p-6 p-2";
   return (
     <div>
@@ -64,7 +52,7 @@ const OurEvent = () => {
       />
       <>
         <div className="grid lg:grid-cols-6 md:grid-cols-2 grid-cols-1 w-full lg:auto-rows-[300px] gap-4 lg:my-8">
-          {data.data.map((item, i) =>
+          {data?.data?.map((item, i) =>
             item._id === updateId ? (
               <form
                 className="bg-slate-100 border p-3 rounded mx-auto lg:w-full "

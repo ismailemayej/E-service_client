@@ -1,6 +1,4 @@
 import { ReactNode } from "react";
-import { TbSelect } from "react-icons/tb";
-
 type TChildren = {
   children: ReactNode;
 };

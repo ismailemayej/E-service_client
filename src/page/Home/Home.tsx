@@ -4,6 +4,8 @@ import OurEvent from "./OurEvent/OurEvent";
 import OurServices from "./OurServices/OurServices";
 import Gallary from "./PhotoGallery/Gallary";
 import PriceingExplore from "./PricigPacakege/PriceingExplore";
+import RecentEvent from "./RecentEvent/RecentEvent";
+import ClientSays from "./Reviews/ClientSays";
 
 const Home = () => {
   return (
@@ -14,6 +16,8 @@ const Home = () => {
       <OurEvent />
       <PriceingExplore />
       <Gallary />
+      <ClientSays />
+      <RecentEvent />
     </div>
   );
 };

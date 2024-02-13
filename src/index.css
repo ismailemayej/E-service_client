@@ -83,3 +83,15 @@
     );
   }
 }
+.slick-slide div {
+  margin: 0 20px;
+}
+.slick-next {
+  background-color: black;
+  color: white;
+  size: 30px;
+}
+.slick-arrow {
+  background-color: black;
+  color: white;
+}

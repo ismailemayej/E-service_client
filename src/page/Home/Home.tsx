@@ -1,3 +1,4 @@
+import EmailSubcribtion from "./EmailSubcribtion/EmailSubcribtion";
 import HeroSection from "./HeroSection/HeroSection";
 import OurClient from "./OurClient/OurClient";
 import OurEvent from "./OurEvent/OurEvent";
@@ -18,6 +19,7 @@ const Home = () => {
       <Gallary />
       <ClientSays />
       <RecentEvent />
+      <EmailSubcribtion />
     </div>
   );
 };

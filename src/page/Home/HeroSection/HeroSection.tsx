@@ -1,5 +1,4 @@
 import mobile from "../../../assets/mobile.jpg";
-
 const HeroSection = () => {
   return (
     <div className="grid lg:grid-cols-12 grid-cols-1 items-center">

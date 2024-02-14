@@ -10,11 +10,11 @@ import AddServices from "../admin/add/AddServices";
 import ControlOurServices from "../admin/ControlOurServices";
 import AddEventItem from "../admin/add/AddEventItem";
 import AddRecentEvent from "../admin/add/AddRecentevent";
-import Addcustomerreview from "../admin/add/AddCustomerReview";
 import ControlEventItems from "../admin/ControlEventItems";
 import ControlRecentEvent from "../admin/ControlRecentEvent";
 import ControlCustomerReviews from "../admin/ControlCustomerReviews";
-import UpdateEventItem from "../admin/update/UpdateEventItem";
+import AddBlogAndNews from "../admin/add/AddBlogAndNews";
+// import UpdateEventItem from "../admin/update/UpdateEventItem";
 
 const route = createBrowserRouter([
   {
@@ -41,11 +41,11 @@ const route = createBrowserRouter([
       { path: "customerreview", element: <ControlCustomerReviews /> },
       { path: "ourservices/add-service", element: <AddServices /> },
       { path: "eventitem/add-eventitem", element: <AddEventItem /> },
-      { path: "eventitem/update-eventitem", element: <UpdateEventItem /> },
+      // { path: "eventitem/update-eventitem", element: <UpdateEventItem /> },
       { path: "recentevent/add-recentevent", element: <AddRecentEvent /> },
       {
-        path: "customerreviews/add-customerreviews",
-        element: <Addcustomerreview />,
+        path: "blogandnews/add-blogandnews",
+        element: <AddBlogAndNews />,
       },
     ],
   },

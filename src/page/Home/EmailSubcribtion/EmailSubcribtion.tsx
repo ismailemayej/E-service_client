@@ -21,7 +21,7 @@ const EmailSubcribtion = () => {
     onSuccess: (data) => {
       console.log("RecentEvent created successfully:", data);
       alert(`This email ${data} is Subcribe Successfully`);
-      const EmailSubcribtion = "";
+
       navigate("/");
     },
     onError: (error) => {

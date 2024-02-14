@@ -40,18 +40,18 @@ const EmailSubcribtion = () => {
       className="bg-slate-300 border p-10 rounded mx-auto mt-10 lg:w-[80%] "
       onSubmit={handleSubmit(onSubmit)}
     >
-      {" "}
       <h1 className="mb-3 lg:text-3xl text-2xl font-semibold">
         Email Subcribtion
       </h1>
       <div className="flex items-center gap-4">
         <Input
           type="email"
+          className="h-14"
           {...register("EmailSubcribtion")}
           placeholder="Type your Email"
         />
         <input
-          className="btn bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg"
+          className="btn bg-blue-600 text-white font-semibold px-6 py-4 rounded-lg"
           type="submit"
         />
       </div>

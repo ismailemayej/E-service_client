@@ -95,3 +95,19 @@
   background-color: black;
   color: white;
 }
+.max-new-lines {
+  display: block;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 9.6em;
+  line-height: 1.6em;
+}
+.max-headline-lines {
+  display: block;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 2.4em;
+  line-height: 1.1em;
+}

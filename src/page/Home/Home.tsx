@@ -1,3 +1,4 @@
+import BlogAndNews from "./BlogAndNews/BlogAndNews";
 import EmailSubcribtion from "./EmailSubcribtion/EmailSubcribtion";
 import HeroSection from "./HeroSection/HeroSection";
 import OurClient from "./OurClient/OurClient";
@@ -19,6 +20,7 @@ const Home = () => {
       <Gallary />
       <ClientSays />
       <RecentEvent />
+      <BlogAndNews />
       <EmailSubcribtion />
     </div>
   );

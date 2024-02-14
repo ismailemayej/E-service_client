@@ -5,40 +5,6 @@ import Slider from "react-slick";
 import { reviews } from "@/components/ui/ReviewDatas";
 
 // next and prev button funtion
-const PrevArrow = (props) => {
-  const { style, className, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{
-        ...style,
-        display: "block",
-        background: "green",
-        borderRadius: "100%",
-
-        alignItems: "center",
-      }}
-      onClick={onClick}
-    />
-  );
-};
-const NextArrow = (props) => {
-  const { style, className, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{
-        ...style,
-        display: "block",
-        background: "green",
-        borderRadius: "100%",
-
-        alignItems: "center",
-      }}
-      onClick={onClick}
-    />
-  );
-};
 
 const ClientSays = () => {
   const settings = {
@@ -47,8 +13,6 @@ const ClientSays = () => {
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 3,
-    prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow />,
     initialSlide: 0,
     responsive: [
       {

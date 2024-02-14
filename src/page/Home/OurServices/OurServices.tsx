@@ -24,7 +24,7 @@ const OurServices = () => {
         subTitle="Ut posuere felis arcu tellus tempus in in ultricies. Gravida id nibh ornare viverra."
       />
       <>
-        <div className="mt-12  lg:w-[100%] w-[100%] gap-5 grid sm:grid-cols-1 md:mx-auto lg:grid-cols-3 md:grid-cols-2">
+        <div className="mt-12  w-[100%] w-[100%] gap-5 grid sm:grid-cols-1 md:mx-auto lg:grid-cols-3 md:grid-cols-2">
           {data?.data?.map((item: Titem) => (
             <div className="group relative rounded-lg flex justify-center content-div bg-cover group-hover:bg-red-500">
               <Card className="card shadow-md bg-slate-200 h-[569px] w-[100%] group-hover:opacity-0">
@@ -48,7 +48,7 @@ const OurServices = () => {
                 </CardHeader>
               </Card>
               <div className="border-4 border-white flex justify-center gap-5 mx-auto absolute transition hover:-translate-y-0.5 hover:duration-500 ease-linear rounded-xl opacity-0 fd-sh group-hover:opacity-100">
-                <Card className="h-[569px] lg:w-[380px] w-[100%] bg-slate-200">
+                <Card className="h-[569px] lg:w-[100%] w-[100%] bg-slate-200">
                   <CardHeader>
                     <CardTitle className="text-[25px] font-extrabold">
                       {item.name}

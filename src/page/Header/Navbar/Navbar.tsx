@@ -1,7 +1,13 @@
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
-    <nav className="lg:mx-20 lg:my-8 my-4 md:mx-[50px] max-w-screen-[1440px] h-12 px-5 overflow-x-hidden">
+    <motion.nav
+      initial={{ opacity: -0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1 }}
+      className="lg:mx-20 lg:my-8 my-4 md:mx-[50px] max-w-screen-[1440px] h-12 px-5 overflow-x-hidden"
+    >
       <div className="  flex flex-wrap items-center justify-between mx-auto">
         <Link
           to="/"
@@ -66,24 +72,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-    </nav>
-
-    // <header classNameName="max-w-screen-[1440] my-[24px] mx-[80px] flex flex-wrap items-center justify-between mx-auto">
-    //   <div classNameName="text-[35px] font-bold ">
-    //     E- <span classNameName="text-[#3461FF]">service</span>
-    //   </div>
-    //   <div classNameName="text-[24px]">
-    //     <Link classNameName="me-16 px-[8] py-[8px]" to="/services">
-    //       Home
-    //     </Link>
-    //     <Link classNameName="me-16 px-[8] py-[8px]" to="/about">
-    //       About
-    //     </Link>
-    //     <Link classNameName=" px-[8] py-[8px]" to="/contact">
-    //       contact
-    //     </Link>
-    //   </div>
-    // </header>
+    </motion.nav>
   );
 };
 

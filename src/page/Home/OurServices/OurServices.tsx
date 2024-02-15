@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import Item from "@/page/items/item";
 import { useQuery } from "@tanstack/react-query";
-import useScrollHook from "@/components/ScrollHook";
+import useScrollHook from "@/components/Hook/ScrollHook";
 const OurServices = () => {
   const { componentRef, style } = useScrollHook();
 
@@ -21,7 +21,7 @@ const OurServices = () => {
     return <p>Loading...</p>;
   }
   return (
-    <div className="mt-10">
+    <motion.div style={style} ref={componentRef} className="mt-10 padding">
       <Heading
         title="Our Services"
         subTitle="Ut posuere felis arcu tellus tempus in in ultricies. Gravida id nibh ornare viverra."
@@ -29,11 +29,7 @@ const OurServices = () => {
       <>
         <div className="mt-12 w-[100%] gap-5 grid sm:grid-cols-1 md:mx-auto lg:grid-cols-3 md:grid-cols-2">
           {data?.data?.map((item: Titem) => (
-            <motion.div
-              style={style}
-              ref={componentRef}
-              className="group relative rounded-lg flex justify-center content-div bg-cover group-hover:bg-red-500"
-            >
+            <div className="group relative rounded-lg flex justify-center content-div bg-cover group-hover:bg-red-500">
               <Card className="card shadow-md bg-slate-200 h-[569px] w-[100%] group-hover:opacity-0">
                 <div className="mb-4">
                   <img
@@ -75,11 +71,11 @@ const OurServices = () => {
                   </CardFooter>
                 </Card>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </>
-    </div>
+    </motion.div>
   );
 };
 

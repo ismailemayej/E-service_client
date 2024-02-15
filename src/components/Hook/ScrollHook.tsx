@@ -5,7 +5,7 @@ const useScrollHook = () => {
   const componentRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: componentRef,
-    offset: ["0 1", "1 1.5"],
+    offset: ["0 1", "1 1"],
   });
   const scaleValue = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   const opacityValue = useTransform(scrollYProgress, [0, 1], [0.1, 1]);

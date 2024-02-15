@@ -1,5 +1,5 @@
 import Heading from "@/components/Heading";
-import useScrollHook from "@/components/ScrollHook";
+import useScrollHook from "@/components/Hook/ScrollHook";
 import PricingLisfIcon from "@/components/ui/PricingLisfIcon";
 import { motion } from "framer-motion";
 

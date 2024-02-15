@@ -15,6 +15,7 @@ import ControlRecentEvent from "../admin/ControlRecentEvent";
 
 import AddBlogAndNews from "../admin/add/AddBlogAndNews";
 import BlogAndNews from "@/components/AllService/BlogAndNews";
+import ControlBlogAndNews from "../admin/ControlBlogAndNews";
 
 const route = createBrowserRouter([
   {
@@ -44,7 +45,7 @@ const route = createBrowserRouter([
       { path: "recentevent/add-recentevent", element: <AddRecentEvent /> },
       {
         path: "blogandnews",
-        element: <BlogAndNews />,
+        element: <ControlBlogAndNews />,
       },
       {
         path: "blogandnews/add-blogandnews",

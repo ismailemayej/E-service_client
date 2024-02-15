@@ -70,14 +70,8 @@ const RecentEvent = () => {
                 <Input
                   className="w-full"
                   type="text"
-                  name="eventimgurl"
-                  defaultValue={item.eventimgurl}
-                />
-                <label>Event Name</label>
-                <Input
-                  type="text"
-                  name="EventName"
-                  defaultValue={item.EventName}
+                  name="recenteventimgurl"
+                  defaultValue={item.recenteventimgurl}
                 />
                 <input
                   className="btn bg-blue-600 text-white font-semibold px-6 py-3 rounded-md mt-3 w-full"

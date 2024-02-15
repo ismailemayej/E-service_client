@@ -23,12 +23,12 @@ const Home = () => {
       <div>
         <OurEvent />
       </div>
-      {/* <PriceingExplore />
+      <PriceingExplore />
       <Gallary />
       <ClientSays />
       <RecentEvent />
       <BlogAndNews />
-      <EmailSubcribtion /> */}
+      <EmailSubcribtion />
     </>
   );
 };

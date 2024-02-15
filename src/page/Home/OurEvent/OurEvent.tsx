@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
 
 const OurEvent = () => {
-  const { style, componentRef } = useScrollHook();
+  // const { style, componentRef } = useScrollHook();
   const { isLoading, data } = useQuery({
     queryKey: ["eventitem"],
     queryFn: () => {
@@ -19,7 +19,7 @@ const OurEvent = () => {
   }
   const styles = "bg-[#D9D9D9] border-2 rounded-lg lg:p-6 p-2";
   return (
-    <motion.div style={style} ref={componentRef}>
+    <motion.div>
       <Heading
         title="Event Items"
         subTitle="Ut posuere felis arcu tellus tempus in in ultricies. Gravida id nibh ornare viverra. Ultrices faucibus neque velit risus ac id lorem."

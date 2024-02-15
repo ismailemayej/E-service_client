@@ -1,30 +1,46 @@
-# React + TypeScript + Vite
+Project Name: E-service
+Live url:
+Site Features :
+User Mode:-
+-----★ Navbar
+-----★ Display hero section
+-----★ Our Service Section ( Dynamically Data Load )
+-----★ Our Clients section
+-----★ Event Item section ( Dynamically Data Load )
+-----★ Package Pricing List
+-----★ Photo Gallery. ( Dynamically Data Load )
+-----★ Recent Event Section ( Dynamically Data Load )
+-----★ Clients Reviews slider
+-----★ Blog And News Slider ( Dynamically Data Load )
+-----★ Email Subscription box (Dynamically Email Post)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Admin Mode:
+-----★ Service Items with Dynamic Data load, new data post,
+----- delete and update system facilities.
+-----★ Event Item with Dynamic Data load, new data post,
+----- delete and update system facilities.
+-----★ Recent Event item with Dynamic Data load, new data post,
+----- delete and update system facilities.
+-----★ Blog And News item with Dynamic Data load, new data post,
+----- delete and update system facilities.
+-----★ Email Subscription with Dynamically new data post.
 
-Currently, two official plugins are available:
+Technology Used:
+Fontend:
+-----★ Html
+-----★ Css
+-----★ Tailwind Css
+-----★ javascript
+-----★ typescript
+-----\* Vite js (for inistall React js)
+-----★ React js
+-----★ Framotion (for Animation)
+-----★ React slider
+-----★ React Icons
+-----★ shadcn
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Backend:
+-----★ Nodejs
+-----★ expressjs
+-----★ Cors
+-----★ MongoDB

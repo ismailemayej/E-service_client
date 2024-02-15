@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 
 import Item from "@/page/items/item";
 import { useQuery } from "@tanstack/react-query";
-import useScrollHook from "@/components/Hook/ScrollHook";
+// import useScrollHook from "@/components/Hook/ScrollHook";
 const OurServices = () => {
-  const { componentRef, style } = useScrollHook();
+  // const { componentRef, style } = useScrollHook();
 
   const { isLoading, data } = useQuery({
     queryKey: ["services"],
@@ -21,7 +21,7 @@ const OurServices = () => {
     return <p>Loading...</p>;
   }
   return (
-    <motion.div style={style} ref={componentRef} className="mt-10 padding">
+    <motion.div className="mt-10 ">
       <Heading
         title="Our Services"
         subTitle="Ut posuere felis arcu tellus tempus in in ultricies. Gravida id nibh ornare viverra."

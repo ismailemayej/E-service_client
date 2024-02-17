@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 interface IFormInput {
   EmailSubcribtion: string;
 }
-
 const EmailSubcribtion = () => {
   const navigate = useNavigate();
   const mutation = useMutation({

@@ -31,7 +31,6 @@ const Home = () => {
       <RecentEvent />
       <BlogAndNews />
       <EmailSubcribtion />
-      <EmailSubcribtion />
     </>
   );
 };

@@ -49,3 +49,17 @@ Backend:
 -----★ expressjs
 -----★ Cors
 -----★ MongoDB
+
+              --------------user gideline----------
+
+For User: locally use - commant:npm run dev (for start)
+----------online use - https://lovely-liger-40aa3c.netlify.app/
+
+For Admin: Locally use - http://localhost:5173/admin/deshboard
+-----------Online use - https://lovely-liger-40aa3c.netlify.app/admin/deshboard
+
+Backend live link: https://e-service-eosin.vercel.app
+-----------Show Servives : https://e-service-eosin.vercel.app/ourservice
+-----------Show EvnetItem : https://e-service-eosin.vercel.app/eventitem
+-----------Show RecentEvent : https://e-service-eosin.vercel.app/recentevent
+-----------Show BlogAndNews : https://e-service-eosin.vercel.app/blogandnews

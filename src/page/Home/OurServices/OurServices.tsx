@@ -16,7 +16,6 @@ const OurServices = () => {
       );
     },
   });
-  console.log(data);
 
   if (isLoading) {
     return <p>Loading...</p>;

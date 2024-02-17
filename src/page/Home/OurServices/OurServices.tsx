@@ -8,6 +8,7 @@ import { TService } from "@/components/AllService/Services";
 // import useScrollHook from "@/components/Hook/ScrollHook";
 const OurServices = () => {
   // const { componentRef, style } = useScrollHook();
+
   const { isLoading, data } = useQuery({
     queryKey: ["services"],
     queryFn: () => {

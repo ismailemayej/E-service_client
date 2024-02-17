@@ -32,12 +32,17 @@ Fontend:
 -----★ Tailwind Css
 -----★ javascript
 -----★ typescript
------\* Vite js (for inistall React js)
+-----★ Vite js (for inistall React js)
 -----★ React js
 -----★ Framotion (for Animation)
 -----★ React slider
 -----★ React Icons
 -----★ shadcn
+-----★ Tanstack Quiry
+-----★ axios
+-----★ React lucide
+-----★ React hook form
+-----★ React Slick
 
 Backend:
 -----★ Nodejs

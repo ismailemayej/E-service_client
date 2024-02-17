@@ -1,5 +1,5 @@
+import { TEventItems } from "@/components/AllService/EventItem";
 import Heading from "@/components/Heading";
-import useScrollHook from "@/components/Hook/ScrollHook";
 import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
 
@@ -26,7 +26,7 @@ const OurEvent = () => {
       />
       <>
         <div className="grid lg:grid-cols-6 md:grid-cols-2 grid-cols-1 w-full lg:auto-rows-[300px] gap-4 lg:my-8">
-          {data?.data?.map((item, i) => (
+          {data?.data?.map((item: TEventItems, i: number) => (
             <div
               key={i}
               className={`${styles} ${

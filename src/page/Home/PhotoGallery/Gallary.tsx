@@ -25,6 +25,15 @@ export const Gallary = () => {
     "https://img.freepik.com/premium-photo/group-office-worker-working-with-computer-desk-modern-office_49071-3248.jpg?size=626&ext=jpg&ga=GA1.1.1176224295.1705248743&semt=ais";
   const img10 =
     "https://img.freepik.com/free-photo/smartly-dressed-asian-woman-sitting-desk-office-with-tablet_1098-20206.jpg?size=626&ext=jpg&ga=GA1.1.1176224295.1705248743&semt=ais";
+
+  const names = [
+    { name: "this is the photo gallary" },
+    { name: "this is the photo gallary" },
+    { name: "this is the photo gallary" },
+    { name: "this is the photo gallary" },
+    { name: "this is the photo gallary" },
+    { name: "this is the photo gallary" },
+  ];
   return (
     <motion.div
       style={style}
@@ -41,21 +50,11 @@ export const Gallary = () => {
           posuere felis arcu tellus tempus in in ultricies. Gravida id nibh
           ornare viverra. Ultrices faucibus neque velit risus ac id lorem.
         </p>
-        <PricingLisfIcon className="mb-4">
-          One day pas access all lecture
-        </PricingLisfIcon>
-        <PricingLisfIcon className="mb-4">
-          One day pas access all lecture
-        </PricingLisfIcon>
-        <PricingLisfIcon className="mb-4">
-          One day pas access all lecture
-        </PricingLisfIcon>
-        <PricingLisfIcon className="mb-4">
-          One day pas access all lecture
-        </PricingLisfIcon>
-        <PricingLisfIcon className="mb-4">
-          One day pas access all lecture
-        </PricingLisfIcon>
+        {names.map((name) => (
+          <span className="mb-4">
+            <PricingLisfIcon name={name.name} />
+          </span>
+        ))}
       </div>
       <div className="grid lg:grid-cols-4 grid-cols-3 gap-3 justify-center items-center">
         <div className="mb-10">

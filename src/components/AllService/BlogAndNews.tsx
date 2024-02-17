@@ -9,12 +9,17 @@ import UpdateButton from "../ui/UpdateButton";
 import DeleteAndUpdate from "../ui/DeleteButton";
 import { useState } from "react";
 
-type TId = {
-  id: number;
+export type TNews = {
+  blogimgurl: string;
+  headline: string;
+  catgory: string;
+  news: string;
+  _id: number;
+  defaultValue: string | number;
 };
 
 const BlogAndNews = () => {
-  const [updateId, setUpdateId] = useState(null);
+  const [updateId, setUpdateId] = useState<number | null>(null);
 
   const { isLoading, data } = useQuery({
     queryKey: ["blogandnews"],
@@ -63,13 +68,16 @@ const BlogAndNews = () => {
     ],
   };
 
-  const handleUpdate = (e) => {
+  const handleUpdate = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const blogimgurl = e.target.blogimgurl.value;
-    const catgory = e.target.catgory.value;
-    const headline = e.target.headline.value;
-    const news = e.target.news.value;
+    const formData = new FormData(e.currentTarget);
+    const blogimgurl = formData.get("blogimgurl") as string;
+    const catgory = formData.get("catgory") as string;
+    const headline = formData.get("headline") as string;
+    const news = formData.get("news") as string;
+
     const data = { headline, catgory, blogimgurl, news };
+
     axios
       .put(`https://e-service-eosin.vercel.app/blogandnews/${updateId}`, data)
       .then(() => {
@@ -78,11 +86,11 @@ const BlogAndNews = () => {
         alert("blogandnews updated successfully");
       })
       .catch((error) => {
-        console.error("Error deleting resource:", error);
+        console.error("Error updating resource:", error);
       });
   };
 
-  const handleRemove = (id: TId) => {
+  const handleRemove = (id: number) => {
     axios
       .delete(`https://e-service-eosin.vercel.app/blogandnews/${id}`)
       .then(() => {
@@ -97,11 +105,12 @@ const BlogAndNews = () => {
   return (
     <>
       <Slider {...settings}>
-        {data.data.map((news, i) =>
+        {data.data.map((news: TNews) =>
           news._id === updateId ? (
             <form
               className="bg-slate-100 border p-3 rounded mx-auto lg:w-full "
               onSubmit={handleUpdate}
+              key={news._id}
             >
               <label>Image URL</label>
               <Input
@@ -177,7 +186,6 @@ const BlogAndNews = () => {
               </div>
               <div className="flex items-end justify-end">
                 <DeleteAndUpdate onClick={() => handleRemove(news._id)} />
-
                 <UpdateButton onClick={() => setUpdateId(news._id)} />
               </div>
             </div>

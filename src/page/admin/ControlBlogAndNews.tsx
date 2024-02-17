@@ -5,7 +5,6 @@ import Heading from "@/components/Heading";
 const ControlBlogAndNews = () => {
   return (
     <div>
-      {" "}
       <Heading subTitle="" title="Blog And News" />
       <BlogAndNews />
       <AddButton link="add-blogandnews">Add Blog And News</AddButton>

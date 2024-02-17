@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 interface IFormInput {
   recenteventimgurl: string; // Changed type to string
-  deatails: string;
+  deatail: string;
 }
 
 const AddRecentevent = () => {

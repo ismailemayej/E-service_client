@@ -1,5 +1,4 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
-
 import Contact from "../Header/Navbar/Contact";
 import Main from "@/LayOut/Main/Main";
 import Home from "../Home/Home";
@@ -12,9 +11,7 @@ import AddEventItem from "../admin/add/AddEventItem";
 import AddRecentEvent from "../admin/add/AddRecentevent";
 import ControlEventItems from "../admin/ControlEventItems";
 import ControlRecentEvent from "../admin/ControlRecentEvent";
-
 import AddBlogAndNews from "../admin/add/AddBlogAndNews";
-import BlogAndNews from "@/components/AllService/BlogAndNews";
 import ControlBlogAndNews from "../admin/ControlBlogAndNews";
 
 const route = createBrowserRouter([
@@ -31,7 +28,7 @@ const route = createBrowserRouter([
     ],
   },
   {
-    path: "admin",
+    path: "/admin",
     element: <AdminHome />,
     children: [
       { index: true, element: <Navigate to="deshboard" /> },
@@ -41,7 +38,6 @@ const route = createBrowserRouter([
       { path: "recentevent", element: <ControlRecentEvent /> },
       { path: "ourservices/add-service", element: <AddServices /> },
       { path: "eventitem/add-eventitem", element: <AddEventItem /> },
-
       { path: "recentevent/add-recentevent", element: <AddRecentEvent /> },
       {
         path: "blogandnews",

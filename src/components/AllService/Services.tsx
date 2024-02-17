@@ -7,11 +7,19 @@ import UpdateButton from "../ui/UpdateButton";
 import { useState } from "react";
 import { Input } from "../ui/input";
 
-type TId = {
-  id: number;
+export type TService = {
+  imgurl: string;
+  name: string;
+  paragraph: string;
+  item1: string;
+  item2: string;
+  item3: string;
+  item4: string;
+  item5: string;
+  _id: number;
 };
 const Services = () => {
-  const [updateId, setUpdateId] = useState(null);
+  const [updateId, setUpdateId] = useState<number>(0);
 
   const { isLoading, data } = useQuery({
     queryKey: ["services"],
@@ -25,16 +33,18 @@ const Services = () => {
   if (isLoading) {
     return <p>Loading...</p>;
   }
-  const handleUpdate = (e) => {
+  const handleUpdate = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const name = e.target.name.value;
-    const paragraph = e.target.paragraph.value;
-    const imgurl = e.target.imgurl.value;
-    const item1 = e.target.item1.value;
-    const item2 = e.target.item2.value;
-    const item3 = e.target.item3.value;
-    const item4 = e.target.item4.value;
-    const item5 = e.target.item5.value;
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name") as string;
+    const paragraph = formData.get("paragraph") as string;
+    const imgurl = formData.get("imgurl") as string;
+    const item1 = formData.get("item1") as string;
+    const item2 = formData.get("item2") as string;
+    const item3 = formData.get("item3") as string;
+    const item4 = formData.get("item4") as string;
+    const item5 = formData.get("item5") as string;
+
     const data = { name, imgurl, paragraph, item1, item2, item3, item4, item5 };
     axios
       .put(`https://e-service-eosin.vercel.app/ourservice/${updateId}`, data)
@@ -49,7 +59,7 @@ const Services = () => {
       });
   };
 
-  const handleRemove = (id: TId) => {
+  const handleRemove = (id: number) => {
     axios
       .delete(`https://e-service-eosin.vercel.app/ourservice/${id}`)
       .then(() => {
@@ -64,7 +74,7 @@ const Services = () => {
   return (
     <>
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-5 w-full mx-auto">
-        {data.data.map((item: Titem) =>
+        {data.data.map((item: TService) =>
           item._id === updateId ? (
             <form
               className="bg-slate-100 border p-3 rounded mx-auto lg:auto-rows-[300px]"

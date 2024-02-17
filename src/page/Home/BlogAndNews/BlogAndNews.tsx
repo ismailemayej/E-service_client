@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
+import { TNews } from "@/components/AllService/BlogAndNews";
 
 // next and prev button funtion
 
@@ -61,7 +62,7 @@ const BlogAndNews = () => {
     <>
       <Heading subTitle="" title="Recent Blog and news" />
       <Slider {...settings}>
-        {data?.data?.map((news) => (
+        {data?.data?.map((news: TNews) => (
           <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <Link to="#">
               <img

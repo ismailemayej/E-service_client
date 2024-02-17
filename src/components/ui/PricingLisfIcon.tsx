@@ -1,6 +1,9 @@
-import { cn } from "@/lib/utils";
+import { ReactNode } from "react";
 
-const PricingLisfIcon = ({ children, className }) => {
+type Tname = {
+  name: ReactNode;
+};
+const PricingLisfIcon = ({ name }: Tname) => {
   return (
     <li className="flex space-x-3">
       <svg
@@ -19,9 +22,7 @@ const PricingLisfIcon = ({ children, className }) => {
         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
         <path d="M5 12l5 5l10 -10"></path>
       </svg>
-      <span className={cn("text-slate-700 text-lg", className)}>
-        {children}
-      </span>
+      <span className="text-lg">{name}</span>
     </li>
   );
 };

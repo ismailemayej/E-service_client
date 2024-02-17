@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 type TAddbutton = {
-  link: URL;
+  link: string;
   children: ReactNode;
 };
 

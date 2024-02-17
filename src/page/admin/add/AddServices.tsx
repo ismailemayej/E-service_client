@@ -4,7 +4,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-interface IFormInput {
+interface TFormInput {
   imgurl: URL;
   name: string;
   item1: string;
@@ -13,11 +13,10 @@ interface IFormInput {
   item4: string;
   item5: string;
   paragraph: string;
-  data: any;
 }
 const AddServices = () => {
   const navigate = useNavigate();
-  const mutation = useMutation({
+  const mutation = useMutation<void, Error, TFormInput>({
     mutationFn: (data) => {
       return axios.post("https://e-service-eosin.vercel.app/ourservice", data);
     },
@@ -31,8 +30,8 @@ const AddServices = () => {
       console.error("Error creating services:", error);
     },
   });
-  const { register, handleSubmit } = useForm<IFormInput>();
-  const onSubmit: SubmitHandler<IFormInput> = (data) => {
+  const { register, handleSubmit } = useForm<TFormInput>();
+  const onSubmit: SubmitHandler<TFormInput> = (data: TFormInput) => {
     mutation.mutate(data);
   };
 

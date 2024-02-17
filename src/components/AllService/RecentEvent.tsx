@@ -5,12 +5,13 @@ import UpdateButton from "../ui/UpdateButton";
 import { useState } from "react";
 import { Input } from "../ui/input";
 
-type TId = {
-  id: number;
+export type TRecentevent = {
+  recenteventimgurl: string;
+  _id: number;
 };
 
 const RecentEvent = () => {
-  const [updateId, setUpdateId] = useState(null);
+  const [updateId, setUpdateId] = useState<number>(0);
 
   const { isLoading, data } = useQuery({
     queryKey: ["recentevent"],
@@ -26,10 +27,10 @@ const RecentEvent = () => {
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handleUpdate = (e: any) => {
+  const handleUpdate = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    const recenteventimgurl = e.target.recenteventimgurl.value;
+    const formData = new FormData(e.currentTarget);
+    const recenteventimgurl = formData.get("recenteventimgurl") as string;
     const data = { recenteventimgurl };
     axios
       .put(`https://e-service-eosin.vercel.app/recentevent/${updateId}`, data)
@@ -43,7 +44,7 @@ const RecentEvent = () => {
       });
   };
 
-  const handleRemove = (id: TId) => {
+  const handleRemove = (id: number) => {
     axios
       .delete(`https://e-service-eosin.vercel.app/recentevent/${id}`)
       .then(() => {
@@ -60,7 +61,7 @@ const RecentEvent = () => {
     <>
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-40 items-cente">
         <div className="grid grid-cols-3 w-full lg:auto-rows-[300px] gap-4">
-          {data.data.map((item: any, i) =>
+          {data.data.map((item: TRecentevent, i: number) =>
             item._id === updateId ? (
               <form
                 className="border p-3 rounded mx-auto lg:w-full"

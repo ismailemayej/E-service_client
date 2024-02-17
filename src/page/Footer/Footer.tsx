@@ -1,3 +1,6 @@
+import { ReactNode } from "react";
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <>
@@ -200,8 +203,12 @@ const Footer = () => {
 };
 
 export default Footer;
+interface TLinkgroup {
+  header: ReactNode;
+  children: ReactNode;
+}
 
-const LinkGroup = ({ children, header }) => {
+const LinkGroup = ({ children, header }: TLinkgroup) => {
   return (
     <>
       <div className="w-full px-4 sm:w-1/2 lg:w-2/12">
@@ -215,16 +222,19 @@ const LinkGroup = ({ children, header }) => {
     </>
   );
 };
-
-const NavLink = ({ link, label }) => {
+interface TNavbar {
+  link: string;
+  label: ReactNode;
+}
+const NavLink = ({ link, label }: TNavbar) => {
   return (
     <li>
-      <a
-        href={link}
+      <Link
+        to={link}
         className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6"
       >
         {label}
-      </a>
+      </Link>
     </li>
   );
 };

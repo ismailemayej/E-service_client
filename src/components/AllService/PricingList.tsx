@@ -25,26 +25,16 @@ const PriceingList = () => (
       </div>
       <div className="pt-6 pb-8 px-6">
         <ul role="list" className="mt-4 space-y-3">
-          <PricingLisfIcon className="">User Dashboard</PricingLisfIcon>
-          <PricingLisfIcon className="">Post 3 Ads per week</PricingLisfIcon>
-          <PricingLisfIcon className="">
-            Multiple images & videos
-          </PricingLisfIcon>
-          <PricingLisfIcon className="line-through text-[#42526b3b]">
-            Basic customer support
-          </PricingLisfIcon>
-          <PricingLisfIcon className="line-through text-[#42526b3b]">
-            Featured ads
-          </PricingLisfIcon>
-          <PricingLisfIcon className="line-through text-[#42526b3b]">
-            Special ads badge
-          </PricingLisfIcon>
-          <PricingLisfIcon className="line-through text-[#42526b3b]">
-            Call to Action in Every Ads
-          </PricingLisfIcon>
-          <PricingLisfIcon className="line-through text-[#42526b3b]">
-            Max 12 team members
-          </PricingLisfIcon>
+          <PricingLisfIcon name="User Dashboard" />
+          <PricingLisfIcon name="Post 3 Ads per week" />
+          <PricingLisfIcon name="Multiple images & videos" />
+          <span className="line-through text-[#42526b3b]">
+            <PricingLisfIcon name="Basic customer support" />
+            <PricingLisfIcon name="Featured ads" />
+            <PricingLisfIcon name="Special ads badge" />
+            <PricingLisfIcon name="Call to Action in Every Ads" />
+            <PricingLisfIcon name="12 team members" />
+          </span>
         </ul>
       </div>
     </div>
@@ -73,20 +63,15 @@ const PriceingList = () => (
       </div>
       <div className="pt-6 pb-8 px-6">
         <ul role="list" className="mt-4 space-y-3">
-          <PricingLisfIcon className="">User Dashboard</PricingLisfIcon>
-          <PricingLisfIcon className="">Post 3 Ads per week</PricingLisfIcon>
-          <PricingLisfIcon className="">
-            Multiple images & videos
-          </PricingLisfIcon>
-          <PricingLisfIcon className="">Basic customer support</PricingLisfIcon>
-          <PricingLisfIcon className="">Featured ads</PricingLisfIcon>
-          <PricingLisfIcon className="">Special ads badge</PricingLisfIcon>
-          <PricingLisfIcon className="line-through text-[#42526b3b]">
-            Call to Action in Every Ads
-          </PricingLisfIcon>
-          <PricingLisfIcon className="line-through text-[#42526b3b]">
-            Max 12 team members
-          </PricingLisfIcon>
+          <PricingLisfIcon name="User Dashboard" />
+          <PricingLisfIcon name="Post 3 Ads per week" />
+          <PricingLisfIcon name="Basic customer support" />
+          <PricingLisfIcon name="Featured ads" />
+          <PricingLisfIcon name="Special ads badge" />
+          <span className="line-through text-[#42526b3b]">
+            <PricingLisfIcon name="Call to Action in Every Ads" />
+            <PricingLisfIcon name=" Max 12 team members" />
+          </span>
         </ul>
       </div>
     </div>
@@ -111,14 +96,15 @@ const PriceingList = () => (
       </div>
       <div className="pt-6 pb-8 px-6">
         <ul role="list" className="mt-4 space-y-3">
-          <PricingLisfIcon>User Dashboard</PricingLisfIcon>
-          <PricingLisfIcon>Post 3 Ads per week</PricingLisfIcon>
-          <PricingLisfIcon>Multiple images & videos</PricingLisfIcon>
-          <PricingLisfIcon>Basic customer support</PricingLisfIcon>
-          <PricingLisfIcon>Featured ads</PricingLisfIcon>
-          <PricingLisfIcon>Special ads badge</PricingLisfIcon>
-          <PricingLisfIcon>Call to Action in Every Ads</PricingLisfIcon>
-          <PricingLisfIcon>Max 12 team members</PricingLisfIcon>
+          <PricingLisfIcon name="User Dashboard" />
+          <PricingLisfIcon name="Post 3 Ads per week" />
+          <PricingLisfIcon name="Basic customer support" />
+          <PricingLisfIcon name="Featured ads" />
+          <PricingLisfIcon name="Special ads badge" />
+          <span className="line-through text-[#42526b3b]">
+            <PricingLisfIcon name="Call to Action in Every Ads" />
+            <PricingLisfIcon name=" Max 12 team members" />
+          </span>
         </ul>
       </div>
     </div>

@@ -4,12 +4,17 @@ import axios from "axios";
 import UpdateButton from "../ui/UpdateButton";
 import { useState } from "react";
 import { Input } from "../ui/input";
-type TId = {
-  id: number;
+
+export type TEventItems = {
+  eventimgurl: string;
+  EventName: string;
+  _id: number;
+  defaultValue: string | number;
+  item: string | unknown;
 };
 
 const EventItem = () => {
-  const [updateId, setUpdateId] = useState(null);
+  const [updateId, setUpdateId] = useState<number>(0);
 
   const { isLoading, data } = useQuery({
     queryKey: ["eventitem"],
@@ -24,11 +29,12 @@ const EventItem = () => {
     return <p>Loading...</p>;
   }
 
-  const handleUpdate = (e) => {
+  const handleUpdate = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const EventName = e.target.EventName.value;
-    const eventimgurl = e.target.eventimgurl.value;
-    const data = { EventName, eventimgurl };
+    const formData = new FormData(e.currentTarget);
+    const eventimgurl = formData.get("eventimgurl") as string;
+    const EventName = formData.get("EventName") as string;
+    const data = { eventimgurl, EventName };
     axios
       .put(`https://e-service-eosin.vercel.app/eventitem/${updateId}`, data)
       .then(() => {
@@ -41,7 +47,7 @@ const EventItem = () => {
       });
   };
 
-  const handleRemove = (id: TId) => {
+  const handleRemove = (id: number) => {
     axios
       .delete(`https://e-service-eosin.vercel.app/eventitem/${id}`)
       .then(() => {
@@ -57,7 +63,7 @@ const EventItem = () => {
   return (
     <>
       <div className="grid lg:grid-cols-6 grid-cols-1 w-full lg:auto-rows-[300px] gap-4 my-8">
-        {data.data.map((item, i) =>
+        {data.data.map((item: TEventItems, i: number) =>
           item._id === updateId ? (
             <form
               className="bg-slate-100 border p-3 rounded mx-auto lg:w-full "
@@ -100,7 +106,6 @@ const EventItem = () => {
                 <h2>{item.EventName}</h2>
                 <div className="flex items-center justify-center">
                   <DeleteAndUpdate onClick={() => handleRemove(item._id)} />
-
                   <UpdateButton onClick={() => setUpdateId(item._id)} />
                 </div>
               </div>
